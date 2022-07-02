@@ -1,0 +1,102 @@
+:root {
+  --purple: hsl(263, 55%, 52%);
+  --dark-gray-blue: hsl(217, 19%, 35%);
+  --black-blue: hsl(219, 29%, 14%);
+  --black-blue-50: rgba(61, 70, 87, 0.5);
+  --black-blue-70: rgba(61, 70, 87, 0.7);
+  --white: hsl(0, 0%, 100%);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-gray-blue: hsl(210, 46%, 95%);
+  font-size: 0.8125rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* * {
+  border: 1px solid red;
+} */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-gray-blue) !important;
+}
+
+.testimonial {
+  height: 100%;
+  z-index: -2;
+}
+
+.testimonial--purple {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.testimonial--gray {
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+}
+
+.testimonial--black {
+  background-color: var(--black-blue);
+  color: var(--white);
+}
+
+.testimonial--white {
+  background-color: var(--white);
+  color: var(--black-blue);
+}
+
+.testimonial__headline {
+  font-weight: 600;
+}
+
+.testimonial__person__image {
+  height: 3.5em;
+}
+
+.testimonial__text.text--light {
+  color: var(--white-70);
+}
+
+.testimonial__text.text--dark {
+  color: var(--black-blue-70);
+}
+
+.testimonial__person__verified.text--light {
+  color: var(--white-50);
+}
+
+.testimonial__person__verified.text--dark {
+  color: var(--black-blue-50);
+}
+
+.quotation {
+  top: 7.5%;
+  right: 7.5%;
+  z-index: -1;
+}
+
+.testimonial__person__image {
+  transition-duration: 750ms;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+.testimonial__person__image:hover {
+  transform: rotate(360deg);
+}
+
+/* Accidentally forgot an "s" on two class elements which copied across everything, had me stuc for 20 minutes trying to change text color.
+
+Spent over an hour trying to figure out how to get margins / gutters between the tiles. Ended up nesting each tile in another div and giving it padding.
+
+Quotation needed negative Z-index, positive wouldn't work for some reason. */
+
+@media (min-width: 992px) {
+  .half-height {
+    height: 50%;
+  }
+}

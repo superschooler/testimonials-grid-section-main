@@ -89,12 +89,6 @@ body {
   transform: rotate(360deg);
 }
 
-/* Accidentally forgot an "s" on two class elements which copied across everything, had me stuc for 20 minutes trying to change text color.
-
-Spent over an hour trying to figure out how to get margins / gutters between the tiles. Ended up nesting each tile in another div and giving it padding.
-
-Quotation needed negative Z-index, positive wouldn't work for some reason. */
-
 @media (min-width: 992px) {
   .half-height {
     height: 50%;

@@ -1,6 +1,6 @@
 # Frontend Mentor - Testimonials grid section solution
 
-This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -14,9 +14,6 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,83 +25,80 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/superschooler/testimonials-grid-section-main](https://github.com/superschooler/testimonials-grid-section-main)
+- Live Site URL: [https://superschooler.github.io/testimonials-grid-section-main/](https://superschooler.github.io/testimonials-grid-section-main/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
+- [Bootstrap](https://getbootstrap.com/), [Bootstrap](https://getbootstrap.com/), and more [Bootstrap](https://getbootstrap.com/)
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned a TON about Bootstrap with this project, as I made it a goal to use Bootstrap as much as possible. This was my second time diving into it and there are a lot of very useful things about Bootstrap, but it seems like the project could also go awry quickly since the changes aren't as easily repeatable as simply targeting a class in CSS. I think there's a balance to be had between Bootstrap and CSS and it's up to me to figure out where that is.
 
-To see how you can add code snippets, see below:
+I also experiemented with the BEM naming convention, although I didn't get to use it much in CSS due to the extraordinary amount of styling I did with Bootstrap. I like how it keeps the code clean and easy to tell exactly what class you're targeting.
+
+Here's an example of the vast amount of Bootstrap used:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+<div class="container p-4">
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="row half-height">
+        <div class="col-lg-8 testimonial__padding p-3">
+          <div
+            class="col-lg-12 testimonial testimonial--purple rounded-3 shadow-lg p-5 position-relative"
+          >
+            <div class="row testimonial__person align-items-center">
+              <img
+                class="col-auto testimonial__person__image rounded-circle me-3"
+                src="images/image-daniel.jpg"
+                alt="Daniel Clifford Headshot"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+My stylesheet was almost exclusively used for colors, positioning the quotation mark, and a hover animation I did on the people's faces just for fun.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+There were three main areas that stumped me for a while on the project:
+
+1. I Accidentally forgot an "s" on two class elements inside of the first testimonial card which copied across everything, had me stuck for 20 minutes trying to change text color before I realized my error.
+
+2. I spent over an hour trying to figure out how to get margins / gutters between the tiles without making them move to the next column. After a couple of breaks and a dozen google searches, I ended up nesting each tile in another div and giving it padding.
+
+3. It took a few minutes to figure out how to get the quotation svg behind the text. I tried a lot of things with Z-index and for some reason it only worked when I moved to negative Z-index values.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I loved the use of Bootstrap to set up the flexbox and intend to use it for more layouts in the future. I need to find a happy medium between Bootstrap and CSS, and also want to dabble with Sass very soon.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Bootstrap](https://getbootstrap.com/) - There's no single page that helped me more than the others with Bootstrap - I spent hours reading through the documentation and searching for the proper use of different properties.
+- [BEM](http://getbem.com/naming/) - I used the BEM naming convention to the best of my abilities, this website helped refresh my memory on when to use hyphens and when to use underscores.
+- [Stack Overflow](https://stackoverflow.com/) - Need I say more?
 
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)- Website - [Brian Schooler](https://www.brianschooler.com)
+- Frontend Mentor - [@superschooler](https://www.frontendmentor.io/profile/superschooler)
+- Twitter - [@superschooler](https://twitter.com/SuperSchooler)
+- GitHub - [@superschooler](https://github.com/superschooler)
